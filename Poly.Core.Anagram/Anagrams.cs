@@ -1,4 +1,4 @@
-﻿ 
+﻿
 
 namespace PolyhydraGames.Core.Anagram
 {
@@ -9,16 +9,17 @@ namespace PolyhydraGames.Core.Anagram
 
             var source = rawSource.ToLower().Trim();
             var proposed = rawProposed.ToLower().Trim();
+            List<char> sourceChars = source.ToList();
             foreach (var ltr in proposed)
             {
-                var index = source.IndexOf(ltr);
+                var index = sourceChars.IndexOf(ltr);
                 if (index == -1) return false;
-                source.Remove(index);
+                sourceChars.RemoveAt(index);
             }
 
             return true;
         }
+ 
 
-        
     }
 }

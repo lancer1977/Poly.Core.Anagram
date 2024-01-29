@@ -16,5 +16,15 @@ public class TestBase
 
 
     }
+
+    [TestCase("butterer"),
+     TestCase("flying"),
+    ]
+    public void ButterflyAnagramsNegatives(string proposal)
+    {
+        Assert.That(!"butterfly".IsAnagram(proposal));
+
+
+    }
 }
 
